@@ -1,4 +1,4 @@
-# codechallenges
+# Code Challenges
 
 To install dependencies:
 
@@ -6,10 +6,24 @@ To install dependencies:
 bun install
 ```
 
-To run:
+To run tests:
 
 ```bash
-bun run index.ts
+bun test
 ```
 
-This project was created using `bun init` in bun v1.2.0. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## Folder structure:
+
+```
+|-Dojo
+|-LeetCode
+  |-TopInterview150
+```
+
+### Dojo
+
+Daily katas
+
+### LeetCode
+
+Excersices from LeetCode
