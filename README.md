@@ -15,10 +15,14 @@ bun test
 ## Folder structure:
 
 ```
+|-Challenges
 |-Dojo
 |-LeetCode
-  |-TopInterview150
 ```
+
+### Challenges
+
+Code challenges
 
 ### Dojo
 
@@ -26,4 +30,4 @@ Daily katas
 
 ### LeetCode
 
-Excersices from LeetCode
+Excersices from LeetCode categorized by study plan and group
