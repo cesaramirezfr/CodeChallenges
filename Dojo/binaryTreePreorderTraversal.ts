@@ -1,8 +1,8 @@
 /**
  * Given a binary tree print all of its leaves using preorder traversal. Generate the class/object to manage nodes and use a recursive function to do the preorder traversal.
- * 
+ *
  * Example
- * 
+ *
  * Input tree:
  *            1
  *          /   \
@@ -13,43 +13,25 @@
  *         5  11 5
  * Output: 1, 7, 2, 6, 5, 11, 9, 9, 5
  */
+import { TreeNode } from './binaryTreeNode';
 
-export class TreeNode {
-  value: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
+export function preorderTraversal(root: TreeNode | null): number[] {
+  const nodes: number[] = [];
 
-  constructor(value: number) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
+  if (root?.value) {
+    // console.log(root.value);
+    nodes.push(root.value);
   }
 
-  addLeft(value: number) {
-    this.left = new TreeNode(value);
+  if (root?.left) {
+    const left = preorderTraversal(root.left);
+    nodes.push(...left);
   }
 
-  addRight(value: number) {
-    this.right = new TreeNode(value);
+  if (root?.right) {
+    const right = preorderTraversal(root.right);
+    nodes.push(...right);
   }
 
-  printNodes() {
-    return this.preorderTraversal(this, []);
-  }
-
-  preorderTraversal(node: TreeNode, nodes: number[]) {
-    if (node.value) {
-      nodes.push(node.value);
-    }
-
-    if (node.left) {
-      this.preorderTraversal(node.left, nodes);
-    }
-
-    if (node.right) {
-      this.preorderTraversal(node.right, nodes);
-    }
-
-    return nodes;
-  }
+  return nodes;
 }
