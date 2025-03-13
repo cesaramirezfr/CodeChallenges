@@ -1,4 +1,3 @@
-// cesaraugusto.ramirez-0297
 /**
  * You are asked to write a FizzBuzz code, it has to be a working implementation, but write it using the worst programing logic you can imagine, feel free to break all best practices you can. Include Unit Tests, functional UTs but also breaking all best practices you can imagine.
 
